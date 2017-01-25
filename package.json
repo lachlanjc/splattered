@@ -1,0 +1,15 @@
+{
+  "name": "splattered",
+  "version": "1.0.0",
+  "description": "Microservice for making rad patterns for Noodles.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Lachlan Campbell <lachlan@getnoodl.es>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "geopattern": "^1.2.3"
+  }
+}
