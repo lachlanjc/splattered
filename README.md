@@ -1,8 +1,8 @@
 # splattered
 
-Microservice for making rad patterns for Noodles. (The name is a partial anagram.)
+Microservice for making rad patterns. (The name is a partial anagram.)
 
-Built with [express](https://npm.im/express) & [geopattern](https://npm.im/geopattern).
+Built with [micro](https://github.com/zeit/micro) & [GeoPattern](https://github.com/btmills/geopattern).
 
 MIT licensed.
 

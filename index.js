@@ -1,14 +1,14 @@
-
-const express = require('express')
+const { send } = require('micro')
+const { router, get } = require('microrouter')
 const GeoPattern = require('geopattern')
 
-const pattern = (text = 'Noodles') => (
-  GeoPattern.generate(text, { baseColor: '#ff6d00' }).toString()
-)
+const pattern = (text = 'Noodles 2') =>
+  GeoPattern.generate(text, { baseColor: '#ff6d00' })
 
-express().get('/:text?', (req, res) => {
-  res.header('Access-Control-Allow-Origin', '*')
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
-  res.set('Content-Type', 'image/svg+xml')
-  res.send(pattern(req.params.text))
-}).listen(4000)
+const data = (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader('Content-Type', 'image/svg+xml')
+  send(res, 200, pattern(req.params.text).toString())
+}
+
+module.exports = router(get('/', data), get('/:text', data))
