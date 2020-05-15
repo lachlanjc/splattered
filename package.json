@@ -2,15 +2,9 @@
   "name": "splattered",
   "version": "2.0.0",
   "description": "Microservice for making rad patterns.",
-  "main": "index.js",
-  "scripts": {
-    "start": "micro"
-  },
   "author": "Lachlan Campbell <lachlan@getnoodl.es>",
   "license": "MIT",
   "dependencies": {
-    "geopattern": "^1.2.3",
-    "micro": "^7.3.3",
-    "microrouter": "^2.1.1"
+    "geopattern": "^1.2.3"
   }
 }
