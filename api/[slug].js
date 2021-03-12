@@ -1,7 +1,7 @@
 const GeoPattern = require('geopattern')
 
 const pattern = (text = 'Noodles 2') =>
-  GeoPattern.generate(text, { baseColor: '#ff6d00' })
+  GeoPattern.generate(text, { baseColor: '#ff4527' })
 
 export default (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*')
